@@ -44,7 +44,7 @@ namespace SolidabisChallenge
             return true;
         }
 
-        private bool AreTwoLastCharactersConsonants(string word)
+        private static bool AreTwoLastCharactersConsonants(string word)
         {
             return AreAllCharactersConsonants(word.Skip(word.Length - 2));
         }

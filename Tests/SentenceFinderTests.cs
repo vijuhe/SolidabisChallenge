@@ -30,7 +30,7 @@ namespace Tests
         [Test]
         public void FindFinnishWithOneOriginalSentenceAndOneDecipheredSentenceAnalyzer()
         {
-            _sut = new SentenceFinder(new List<ISentenceAnalyzer> { new WordLengthAnalyzer(), new OnlyConsonantsInWordAnalyzer() });
+            _sut = new SentenceFinder(new List<ISentenceAnalyzer> { new WordLengthAnalyzer(), new ConsecutiveConsonantAnalyzer() });
 
             SentenceSplit result = _sut.FindFinnishSentences(new List<string>
             {
