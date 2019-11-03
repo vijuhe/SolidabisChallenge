@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidabisChallenge", "SolidabisChallenge\SolidabisChallenge.csproj", "{6D6FCD6D-9884-4A2D-AC6D-4A7E8164EDF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidabisChallenge", "SolidabisChallenge\SolidabisChallenge.csproj", "{6D6FCD6D-9884-4A2D-AC6D-4A7E8164EDF0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4375654-9B85-4725-B3CD-405F88743DC4}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{79556BB2-7B44-403D-9E5A-9E6EE3DF1B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{6D6FCD6D-9884-4A2D-AC6D-4A7E8164EDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D6FCD6D-9884-4A2D-AC6D-4A7E8164EDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D6FCD6D-9884-4A2D-AC6D-4A7E8164EDF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79556BB2-7B44-403D-9E5A-9E6EE3DF1B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79556BB2-7B44-403D-9E5A-9E6EE3DF1B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79556BB2-7B44-403D-9E5A-9E6EE3DF1B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79556BB2-7B44-403D-9E5A-9E6EE3DF1B6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
