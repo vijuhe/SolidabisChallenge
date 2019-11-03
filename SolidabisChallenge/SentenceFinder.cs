@@ -29,21 +29,24 @@ namespace SolidabisChallenge
                 return;
             }
 
-            List<string> finnishSentences = new List<string>();
+            List<Sentence> finnishSentences = new List<Sentence>();
             foreach (Sentence undecidedSentence in undecidedSentences.Select(s => new Sentence(s)))
             {
-                while (undecidedSentence.TryCreatingNextDecipheredSentence())
+                do
                 {
                     if (analyzers.All(a => a.CanBeFinnish(undecidedSentence)))
                     {
-                        finnishSentences.Add(undecidedSentence.DecipheredSentence);
+                        finnishSentences.Add(undecidedSentence);
                         break;
                     }
-                }
+                } while (undecidedSentence.TryCreatingNextDecipheredSentence());
             }
-            nonsense.AddRange(undecidedSentences.Where(s => !finnishSentences.Contains(s)));
+
+            IReadOnlyCollection<string> cipheredFinnishSentences =
+                finnishSentences.Select(s => s.OriginalSentence).ToList();
+            nonsense.AddRange(undecidedSentences.Where(s => !cipheredFinnishSentences.Contains(s)));
             undecidedSentences.Clear();
-            undecidedSentences.AddRange(finnishSentences);
+            undecidedSentences.AddRange(finnishSentences.Select(s => s.DecipheredSentence));
         }
 
         private void FindNonsenseFromOriginalSentences(List<string> nonsense, List<string> undecidedSentences)

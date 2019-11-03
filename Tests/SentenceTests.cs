@@ -28,172 +28,172 @@ namespace Tests
         [Test]
         public void DecipheringSentencesMovesCharactersOneStepForwardInAlphabet()
         {
-            _sut = new Sentence("ab cd");
+            _sut = new Sentence("Ab cd.");
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("bc de"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("bc de."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("bc"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("de"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("cd ef"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("cd ef."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("cd"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("ef"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("de fg"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("de fg."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("de"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("fg"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("ef gh"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("ef gh."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("ef"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("gh"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("fg hi"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("fg hi."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("fg"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("hi"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("gh ij"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("gh ij."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("gh"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("ij"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("hi jk"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("hi jk."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("hi"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("jk"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("ij kl"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("ij kl."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("ij"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("kl"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("jk lm"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("jk lm."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("jk"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("lm"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("kl mn"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("kl mn."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("kl"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("mn"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("lm no"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("lm no."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("lm"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("no"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("mn op"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("mn op."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("mn"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("op"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("no pq"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("no pq."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("no"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("pq"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("op qr"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("op qr."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("op"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("qr"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("pq rs"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("pq rs."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("pq"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("rs"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("qr st"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("qr st."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("qr"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("st"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("rs tu"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("rs tu."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("rs"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("tu"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("st uv"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("st uv."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("st"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("uv"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("tu vw"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("tu vw."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("tu"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("vw"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("uv wx"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("uv wx."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("uv"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("wx"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("vw xy"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("vw xy."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("vw"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("xy"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("wx yz"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("wx yz."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("wx"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("yz"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("xy zе"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("xy zе."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("xy"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("zе"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("yz ед"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("yz ед."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("yz"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("ед"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("zе дц"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("zе дц."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("zе"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("дц"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("ед цa"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("ед цa."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("ед"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("цa"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("дц ab"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("дц ab."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("дц"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("ab"));
 
             Assert.IsTrue(_sut.TryCreatingNextDecipheredSentence());
-            Assert.That(_sut.DecipheredSentence, Is.EqualTo("цa bc"));
+            Assert.That(_sut.DecipheredSentence, Is.EqualTo("цa bc."));
             Assert.That(_sut.DecipheredWords.Count(), Is.EqualTo(2));
             Assert.IsTrue(_sut.DecipheredWords.Contains("цa"));
             Assert.IsTrue(_sut.DecipheredWords.Contains("bc"));

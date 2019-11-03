@@ -13,7 +13,8 @@ namespace SolidabisChallenge
             IEnumerable<string> sentences = await GetSentences();
             var sentenceFinder = new SentenceFinder(new List<ISentenceAnalyzer>
             {
-                new WordLengthAnalyzer()
+                new WordLengthAnalyzer(),
+                new OnlyConsonantsInWordAnalyzer()
             });
             SentenceSplit split = sentenceFinder.FindFinnishSentences(sentences);
             await File.WriteAllLinesAsync("bullshit.txt", split.NonSense);

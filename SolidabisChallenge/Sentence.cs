@@ -26,7 +26,7 @@ namespace SolidabisChallenge
             StringBuilder newSentenceBuilder = new StringBuilder();
             foreach (char c in DecipheredSentence)
             {
-                if (c.Equals(' '))
+                if (c.Equals(' ') || c.Equals('.'))
                 {
                     newSentenceBuilder.Append(c);
                     continue;
@@ -39,7 +39,7 @@ namespace SolidabisChallenge
 
             DecipheredSentence = newSentenceBuilder.ToString();
             SplitDecipheredWords();
-            return !DecipheredSentence.Equals(OriginalSentence);
+            return !DecipheredSentence.Equals(OriginalSentence.ToLower());
         }
 
         private void SplitDecipheredWords()
